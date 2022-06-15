@@ -13,7 +13,9 @@ namespace employeewages
             int empHrs = 0;
             int EMP_RATE_PER_HRS = 20;
             int empWage = 0;
-            public void presentorabsent()
+            int totalEmpWage = 0;
+            int NUM_OF_WORKING_DAYS = 10;
+        public void presentorabsent()
             {
 
                 Random random = new Random();
@@ -97,8 +99,38 @@ namespace employeewages
             empWage = empHrs * EMP_RATE_PER_HRS;
             Console.WriteLine("Daily employee wage " + empWage + "\n");
         }
+        public void calculateMonthlyWage()
+        {
+            for (int days = 0; days < NUM_OF_WORKING_DAYS; days++)
+            {
+                Random rand = new Random();
+                int empCheck = rand.Next(0, 3);
+                switch (empCheck)
+                {
+                    case 1:
+                        Console.WriteLine("Employee is present full time");
+                        empHrs = 8;
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Employee is present part time");
+                        empHrs = 4;
+                        break;
+
+                    default:
+                        Console.WriteLine("Employee is absent");
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HRS;
+                totalEmpWage += empWage;
+                Console.WriteLine("Daily employee wage " + empWage);
+            }
+            Console.WriteLine("Total employee wage for month " + totalEmpWage + "\n");
+        }
     }
 }
+
 
 
 
