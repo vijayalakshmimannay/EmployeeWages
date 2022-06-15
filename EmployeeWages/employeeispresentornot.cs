@@ -4,36 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace employeewages
+namespace totalemployeewages
 {
-    class employeeispresentornot
-    { 
-            int IS_FULL_TIME = 1;
-            int IS_PART_TIME = 0;
-            int empHrs = 0;
-            int EMP_RATE_PER_HRS = 20;
-            int empWage = 0;
-            public void presentorabsent()
+    internal class ispresent
+    {
+        int IS_FULL_TIME = 2;
+        int IS_PART_TIME = 1;
+        int empHrs = 0;
+        int EMP_RATE_PER_HRS = 20;
+        int empWage = 0;
+
+        public void presentorabsent()
+        {
+
+            Random random = new Random();
+            //computation
+            int empCheck = random.Next(0, 3);
+            if (empCheck == IS_FULL_TIME)
             {
-
-                Random random = new Random();
-                //computation
-                int empCheck = random.Next(0, 3);
-                if (empCheck == IS_FULL_TIME)
-                {
-                    Console.WriteLine("Employee is present");
-                }
-                else
-                {
-                    Console.WriteLine("Employee is absent");
-                }
-
+                Console.WriteLine("Employee is present");
             }
+            else
+            {
+                Console.WriteLine("Employee is absent");
+            }
+        }
         public void dailyWage()
         {
             Random rand = new Random();
             int empCheck = rand.Next(0, 3);
-            if (empCheck == 1)
+            if (empCheck == IS_FULL_TIME)
             {
                 Console.WriteLine("Employee is present");
                 empHrs = 8;
@@ -47,7 +47,6 @@ namespace employeewages
             Console.WriteLine("Daily employee wage " + empWage + "\n");
 
         }
-
         public void addPartTimeWage()
         {
 
@@ -99,7 +98,5 @@ namespace employeewages
         }
     }
 }
-
-
 
 
