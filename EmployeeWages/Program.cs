@@ -9,6 +9,7 @@ namespace employeewages
             employeeispresentornot.presentorabsent();
             employeeispresentornot.dailyWage();
             employeeispresentornot.addPartTimeWage();
+            employeeispresentornot.EmpWageUsingSwitch();
         }
     }
 }

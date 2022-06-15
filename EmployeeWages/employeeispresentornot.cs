@@ -72,7 +72,34 @@ namespace employeewages
             empWage = empHrs * EMP_RATE_PER_HRS;
             Console.WriteLine("Daily employee wage " + empWage + "\n");
         }
-    }
+        public void EmpWageUsingSwitch()
+        {
+            Random rand = new Random();
+            int empCheck = rand.Next(0, 3);
 
+            switch (empCheck)
+            {
+                case 1:
+                    Console.WriteLine("Employee is present full time");
+                    empHrs = 8;
+                    break;
+
+                case 2:
+                    Console.WriteLine("Employee is present part time");
+                    empHrs = 4;
+                    break;
+
+                default:
+                    Console.WriteLine("Employee is absent");
+                    empHrs = 0;
+                    break;
+            }
+            empWage = empHrs * EMP_RATE_PER_HRS;
+            Console.WriteLine("Daily employee wage " + empWage + "\n");
+        }
+    }
 }
+
+
+
 
