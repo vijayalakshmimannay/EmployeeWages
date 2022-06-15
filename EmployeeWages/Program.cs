@@ -5,8 +5,9 @@ namespace employeewages
     {
         public static void Main(string[] args)
         {
-            Employeeispresentornot employeeispresentornot = new Employeeispresentornot();
+            employeeispresentornot employeeispresentornot = new employeeispresentornot();
             employeeispresentornot.presentorabsent();
+            employeeispresentornot.dailyWage();
         }
     }
 }
