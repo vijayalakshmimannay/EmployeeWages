@@ -48,6 +48,31 @@ namespace employeewages
 
         }
 
-        
+        public void addPartTimeWage()
+        {
+
+            Random rand = new Random();
+            int empCheck = rand.Next(0, 3);
+
+            if (empCheck == IS_FULL_TIME)
+            {
+                Console.WriteLine("Employee is present full time");
+                empHrs = 8;
+            }
+            else if (empCheck == IS_PART_TIME)
+            {
+                Console.WriteLine("Employee is present part time");
+                empHrs = 4;
+            }
+            else
+            {
+                Console.WriteLine("Employee is absent");
+                empHrs = 0;
+            }
+            empWage = empHrs * EMP_RATE_PER_HRS;
+            Console.WriteLine("Daily employee wage " + empWage + "\n");
+        }
     }
+
 }
+
