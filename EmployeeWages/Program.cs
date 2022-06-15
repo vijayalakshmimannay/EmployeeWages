@@ -5,10 +5,11 @@ namespace employeewages
     {
         public static void Main(string[] args)
         {
-            employeeispresentornot employeeispresentornot = new employeeispresentornot();
-            employeeispresentornot.presentorabsent();
-            employeeispresentornot.dailyWage();
-            employeeispresentornot.addPartTimeWage();
+           
+        } totalemployeewages.ispresent value = new totalemployeewages.ispresent();
+            value.presentorabsent();
+            value.dailyWage();
+            value.addPartTimeWage();
         }
     }
 }
