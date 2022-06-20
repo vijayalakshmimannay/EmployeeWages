@@ -161,6 +161,6 @@ namespace totalemployeewages
             Console.WriteLine("Total employee wage " + totalEmpWage);
         }
 
+
     }
 }
-
