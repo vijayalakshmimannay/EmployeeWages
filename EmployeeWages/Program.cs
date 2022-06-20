@@ -1,18 +1,4 @@
-﻿using System;
-namespace employeewages
-{
-    public class program
-    {
-        public static void Main(string[] args)
-        {
-            totalemployeewages.ispresentt value = new totalemployeewages.ispresent();
-            value.presentorabsent();
-            value.dailyWage();
-            value.addPartTimeWage();
-            value.EmpWageUsingSwitch();
-            value.calculateMonthlyWage();
-            value.calculateTotalEmpWage();
-            value.WageForMonth();
-        }
-    }
-}
+﻿Console.WriteLine("Hello, World!");
+totalemployeewages.MultipleCompanies value = new totalemployeewages.MultipleCompanies();
+value.calculateTotalEmpWage("Dmart", 40, 1000, 70);
+value.calculateTotalEmpWage("Reliance", 25, 500, 60);
